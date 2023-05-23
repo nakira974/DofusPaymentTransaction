@@ -1,40 +1,40 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ValidateCookies" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="850.4,704.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ValidateCookies" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="850.4,1284.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
-      <x:String>System.Activities</x:String>
-      <x:String>System.Activities.Statements</x:String>
-      <x:String>System.Activities.Expressions</x:String>
-      <x:String>System.Activities.Validation</x:String>
-      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
       <x:String>Microsoft.VisualBasic.Activities</x:String>
       <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>System.Collections</x:String>
       <x:String>System.Collections.Generic</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
       <x:String>System.Data</x:String>
       <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
       <x:String>System.Linq</x:String>
       <x:String>System.Net.Mail</x:String>
-      <x:String>System.Xml</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Text</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
       <x:String>System.Xml.Linq</x:String>
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
-      <x:String>System.Windows.Markup</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
-      <x:String>GlobalConstantsNamespace</x:String>
-      <x:String>UiPath.UIAutomationNext.Enums</x:String>
-      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
-      <x:String>System.Runtime.Serialization</x:String>
-      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
-      <x:String>System.Drawing</x:String>
-      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
-      <x:String>UiPath.UIAutomationNext.Activities</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
-      <x:String>System.Activities.Runtime.Collections</x:String>
-      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -93,15 +93,15 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Validation des cookies" sap:VirtualizedContainerService.HintSize="552,640" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Validation des cookies" sap:VirtualizedContainerService.HintSize="619.2,1220" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="On tente l'utilisation d'une instance de la page de pre-login de Dofus" sap:VirtualizedContainerService.HintSize="489.6,528" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="On tente l'utilisation d'une instance de la page de pre-login de Dofus" sap:VirtualizedContainerService.HintSize="556.8,1108" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Utilisation d'une instance de la page de pre-login de Dofus" sap:VirtualizedContainerService.HintSize="470.4,540.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="d3c6f567-be0a-469a-82b1-e748a4d3538e" Version="V2">
+        <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Utilisation d'une instance de la page de pre-login de Dofus" sap:VirtualizedContainerService.HintSize="520,853.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="d3c6f567-be0a-469a-82b1-e748a4d3538e" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
@@ -122,7 +122,7 @@
                         </InArgument>
                       </ui:LogMessage.Message>
                     </ui:LogMessage>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="False" DisplayName="On valide les cookies" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d3c6f567-be0a-469a-82b1-e748a4d3538e" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="False" DisplayName="On valide les cookies" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d3c6f567-be0a-469a-82b1-e748a4d3538e" Timeout="5" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.dofus.com/en/prehome" CvElementArea="1115, 545, 190, 63" CvTextArea="1155, 562, 107, 26" CvTextArgument="ACCEPT ALL" CvType="Button" DesignTimeRectangle="1117, 549, 186, 58" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'accept all'" FullSelectorArgument="&lt;webctrl aaname='             accept all        ' parentid='ui-id-1' tag='BUTTON' /&gt;" FuzzyAccuracy="0.82" FuzzySelectorArgument="&lt;webctrl aaname='             accept all        ' parentid='ui-id-1' tag='BUTTON' type='' class='btn btn-primary btn-lg ak-accept' check:innerText='ACCEPT ALL' /&gt;" Guid="4481a5a6-03d1-4aef-8a71-09b9f86acef8" ImageBase64="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" InformativeScreenshot="f25d0a6ceab94213bfc9879a4c294277.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='DOFUS, the Tactical MMORPG' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -136,7 +136,7 @@
                   </Sequence>
                 </TryCatch.Try>
                 <TryCatch.Catches>
-                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="452.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -147,7 +147,7 @@
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Erreur de validation des cookies" sap:VirtualizedContainerService.HintSize="449.6,205.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence DisplayName="Erreur de validation des cookies" sap:VirtualizedContainerService.HintSize="449.6,161.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -180,10 +180,10 @@
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="456,340" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="523.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -208,7 +208,7 @@
             </Sequence>
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="ui:BrowserOperationException" sap:VirtualizedContainerService.HintSize="456,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+        <Catch x:TypeArguments="ui:BrowserOperationException" sap:VirtualizedContainerService.HintSize="523.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
