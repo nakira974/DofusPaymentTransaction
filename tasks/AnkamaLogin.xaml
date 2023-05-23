@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="AnkamaLogin" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="AnkamaLogin" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Account" Type="InArgument(x:String)" />
     <x:Property Name="in_Password" Type="InArgument(x:String)" />
@@ -124,23 +124,23 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Connexion à Ankama" sap:VirtualizedContainerService.HintSize="668,2326.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Connexion à Ankama" sap:VirtualizedContainerService.HintSize="668,2208" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Firefox: DOFUS, the Tactical MMORPG" sap:VirtualizedContainerService.HintSize="605.6,2214.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="56e4dd2a-1dfa-46e4-a714-262f2d178d8e" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Firefox: DOFUS, the Tactical MMORPG" sap:VirtualizedContainerService.HintSize="605.6,2096" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" IsIncognito="False" ScopeGuid="56e4dd2a-1dfa-46e4-a714-262f2d178d8e" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Validation des cookies et connexion au site Dofus" sap:VirtualizedContainerService.HintSize="572,1997.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Validation des cookies et connexion au site Dofus" sap:VirtualizedContainerService.HintSize="572,1879.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="isCookiesBanner">
                 <Variable.Default>
-                  <Literal x:TypeArguments="x:Boolean" Value="True" />
+                  <Literal x:TypeArguments="x:Boolean" />
                 </Variable.Default>
               </Variable>
             </Sequence.Variables>
@@ -156,46 +156,29 @@
                 </InArgument>
               </ui:LogMessage.Message>
             </ui:LogMessage>
-            <TryCatch DisplayName="On tente le check la bannière de cookies" sap:VirtualizedContainerService.HintSize="509.6,1751.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="On tente le check la bannière de cookies" sap:VirtualizedContainerService.HintSize="509.6,1632.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
-                <Sequence DisplayName="Check de la bannière de cookies" sap:VirtualizedContainerService.HintSize="472.8,1520" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Check de la bannière de cookies" sap:VirtualizedContainerService.HintSize="472.8,1401.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:OCRTextExists DisplayName="Si la bannière de cookie est présente" sap:VirtualizedContainerService.HintSize="410.4,225.6" sap2010:WorkflowViewState.IdRef="OCRTextExists_1" Occurrence="1" Text="cookies">
-                    <ui:OCRTextExists.OCREngine>
-                      <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
-                        <ActivityFunc.Argument>
-                          <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
-                        </ActivityFunc.Argument>
-                        <p:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Language="auto" Profile="Screen" Scale="1" Timeout="100000">
-                          <p:UiPathScreenOCR.Image>
-                            <InArgument x:TypeArguments="sd:Image">
-                              <CSharpValue x:TypeArguments="sd:Image" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">Image</CSharpValue>
-                            </InArgument>
-                          </p:UiPathScreenOCR.Image>
-                        </p:UiPathScreenOCR>
-                      </ActivityFunc>
-                    </ui:OCRTextExists.OCREngine>
-                    <ui:OCRTextExists.Result>
+                  <ui:UiElementExists DisplayName="Si la bannière de cookie est présente" sap:VirtualizedContainerService.HintSize="410.4,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                    <ui:UiElementExists.Exists>
                       <OutArgument x:TypeArguments="x:Boolean">
-                        <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">isCookiesBanner</CSharpReference>
+                        <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">isCookiesBanner</CSharpReference>
                       </OutArgument>
-                    </ui:OCRTextExists.Result>
-                    <ui:OCRTextExists.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="059c17c0-5843-4ac5-bc1f-a13b0be927ff" InformativeScreenshot="078002617c31ca99d322dbfa3c5c530a" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;p' parentid='ui-id-1' tag='P' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
+                    </ui:UiElementExists.Exists>
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="61031b37-11c5-4c9c-8e87-136874010a50" InformativeScreenshot="a73d535b0501ab0af150169b26abdf8a" Selector="&lt;webctrl id='ui-id-1' tag='DIV' /&gt;" TimeoutMS="5">
                         <ui:Target.WaitForReady>
                           <InArgument x:TypeArguments="ui:WaitForReady" />
                         </ui:Target.WaitForReady>
                       </ui:Target>
-                    </ui:OCRTextExists.Target>
-                  </ui:OCRTextExists>
-                  <If sap:VirtualizedContainerService.HintSize="410.4,1140.8" sap2010:WorkflowViewState.IdRef="If_1">
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <If DisplayName="Si la bannière de cookies est présente" sap:VirtualizedContainerService.HintSize="410.4,1140.8" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Condition>
                       <InArgument x:TypeArguments="x:Boolean">
                         <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">isCookiesBanner</CSharpValue>
