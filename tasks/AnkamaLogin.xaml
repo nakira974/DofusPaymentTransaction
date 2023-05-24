@@ -254,7 +254,9 @@
           </ui:LogMessage>
           <ui:RemoveLogFields DisplayName="Suppression de l'action ANKAMA-LOGIN du LogCat" sap:VirtualizedContainerService.HintSize="387.2,89.6" sap2010:WorkflowViewState.IdRef="RemoveLogFields_2">
             <ui:RemoveLogFields.Fields>
-              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                <InArgument x:TypeArguments="x:String">ACTION</InArgument>
+              </scg:List>
             </ui:RemoveLogFields.Fields>
           </ui:RemoveLogFields>
         </Sequence>
