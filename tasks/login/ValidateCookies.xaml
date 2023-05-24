@@ -3,7 +3,7 @@
     <x:Property Name="in_AnkamaLogin" Type="InArgument(x:Boolean)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>850.4,2612.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850.4,2878.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -99,42 +99,42 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Validation des cookies" sap:VirtualizedContainerService.HintSize="758.4,2548" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Validation des cookies" sap:VirtualizedContainerService.HintSize="758.4,2813.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="On tente l'utilisation d'une instance de la page de pre-login de Dofus ou Ankama" sap:VirtualizedContainerService.HintSize="696,2436" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="On tente l'utilisation d'une instance de la page de pre-login de Dofus ou Ankama" sap:VirtualizedContainerService.HintSize="696,2701.6" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="659.2,2181.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+        <Sequence sap:VirtualizedContainerService.HintSize="659.2,2447.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If DisplayName="Cookies Ankama ou pre-login Dofus ?" sap:VirtualizedContainerService.HintSize="596.8,2069.6" sap2010:WorkflowViewState.IdRef="If_2">
+          <If DisplayName="Cookies Ankama ou pre-login Dofus ?" sap:VirtualizedContainerService.HintSize="596.8,2335.2" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">in_AnkamaLogin</CSharpValue>
               </InArgument>
             </If.Condition>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="563.2,943.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <Sequence sap:VirtualizedContainerService.HintSize="563.2,1076" sap2010:WorkflowViewState.IdRef="Sequence_13">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Utilisation d'une instance de la page de login Ankama" sap:VirtualizedContainerService.HintSize="520,853.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" ScopeGuid="ff9b3148-1742-40e0-ba86-f0a5681dfb86" Version="V2">
+                <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Utilisation d'une instance de la page de login Ankama" sap:VirtualizedContainerService.HintSize="520,986.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="ff9b3148-1742-40e0-ba86-f0a5681dfb86" Version="V2">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                       </ActivityAction.Argument>
-                      <TryCatch DisplayName="On tente la validation des cookies de login Ankama" sap:VirtualizedContainerService.HintSize="486.4,636.8" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                      <TryCatch DisplayName="On tente la validation des cookies de login Ankama" sap:VirtualizedContainerService.HintSize="486.4,769.6" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                         <TryCatch.Try>
-                          <Sequence DisplayName="Validation des cookies de login Ankama" sap:VirtualizedContainerService.HintSize="449.6,405.6" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                          <Sequence DisplayName="Validation des cookies de login Ankama" sap:VirtualizedContainerService.HintSize="449.6,538.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -158,6 +158,13 @@
                                 </uix:TargetAnchorable>
                               </uix:NClick.Target>
                             </uix:NClick>
+                            <ui:LogMessage DisplayName="Cookies Ankama validés" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace">
+                              <ui:LogMessage.Message>
+                                <InArgument x:TypeArguments="x:Object">
+                                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_19">"Cookies Ankama validés"</CSharpValue>
+                                </InArgument>
+                              </ui:LogMessage.Message>
+                            </ui:LogMessage>
                           </Sequence>
                         </TryCatch.Try>
                         <TryCatch.Catches>
@@ -197,21 +204,21 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="563.2,943.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <Sequence sap:VirtualizedContainerService.HintSize="563.2,1076" sap2010:WorkflowViewState.IdRef="Sequence_14">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Utilisation d'une instance de la page de pre-login de Dofus" sap:VirtualizedContainerService.HintSize="520,853.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="d3c6f567-be0a-469a-82b1-e748a4d3538e" Version="V2">
+                <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Utilisation d'une instance de la page de pre-login de Dofus" sap:VirtualizedContainerService.HintSize="520,986.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="d3c6f567-be0a-469a-82b1-e748a4d3538e" Version="V2">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                       </ActivityAction.Argument>
-                      <TryCatch DisplayName="On tente la validation des cookies de pre-login Dofus" sap:VirtualizedContainerService.HintSize="486.4,636.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                      <TryCatch DisplayName="On tente la validation des cookies de pre-login Dofus" sap:VirtualizedContainerService.HintSize="486.4,769.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                         <TryCatch.Try>
-                          <Sequence DisplayName="Validation des cookies de pre-login Dofus" sap:VirtualizedContainerService.HintSize="449.6,405.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <Sequence DisplayName="Validation des cookies de pre-login Dofus" sap:VirtualizedContainerService.HintSize="449.6,538.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -235,6 +242,13 @@
                                 </uix:TargetAnchorable>
                               </uix:NClick.Target>
                             </uix:NClick>
+                            <ui:LogMessage DisplayName="Cookies Dofus validés" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Trace">
+                              <ui:LogMessage.Message>
+                                <InArgument x:TypeArguments="x:Object">
+                                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_21">"Cookies Dofus validés"</CSharpValue>
+                                </InArgument>
+                              </ui:LogMessage.Message>
+                            </ui:LogMessage>
                           </Sequence>
                         </TryCatch.Try>
                         <TryCatch.Catches>
