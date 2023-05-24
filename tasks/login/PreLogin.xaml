@@ -3,7 +3,7 @@
     <x:Property Name="in_doValidateCookies" Type="InArgument(x:Boolean)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>694.4,2438.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>538.4,895.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -99,21 +99,26 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Séquence de pre-login au site Dofus" sap:VirtualizedContainerService.HintSize="704.8,2373.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
+  <Sequence DisplayName="Séquence de pre-login au site Dofus" sap:VirtualizedContainerService.HintSize="548.8,830.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="On tente l'utilisation d'une instance de la page de pre-login de Dofus" sap:VirtualizedContainerService.HintSize="642.4,2261.6" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+    <ui:AddLogFields DisplayName="Ajout de l'action PRE-LOGIN dans le LogCat" sap:VirtualizedContainerService.HintSize="486.4,89.6" sap2010:WorkflowViewState.IdRef="AddLogFields_1">
+      <ui:AddLogFields.Fields>
+        <InArgument x:TypeArguments="x:String" x:Key="ACTION">PRE-LOGIN</InArgument>
+      </ui:AddLogFields.Fields>
+    </ui:AddLogFields>
+    <TryCatch DisplayName="On tente l'utilisation d'une instance de la page de pre-login de Dofus" sap:VirtualizedContainerService.HintSize="486.4,588.8" sap2010:WorkflowViewState.IdRef="TryCatch_3">
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Utilisation d'une instance de la page de pre-login de Dofus" sap:VirtualizedContainerService.HintSize="605.6,2007.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="2df68779-d1ff-4ac7-aba0-7ba0809696f0" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Utilisation d'une instance de la page de pre-login de Dofus" sap:VirtualizedContainerService.HintSize="605.6,2005.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="2df68779-d1ff-4ac7-aba0-7ba0809696f0" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Validation des cookies et connexion au site Dofus" sap:VirtualizedContainerService.HintSize="572,1790.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence DisplayName="Validation des cookies et connexion au site Dofus" sap:VirtualizedContainerService.HintSize="572,1788.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -289,7 +294,7 @@
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="608.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="452.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -303,7 +308,7 @@
             <Rethrow DisplayName="Erreur du navigateur" sap:VirtualizedContainerService.HintSize="334.4,24.8" sap2010:WorkflowViewState.IdRef="Rethrow_2" />
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="ui:BrowserOperationException" sap:VirtualizedContainerService.HintSize="608.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+        <Catch x:TypeArguments="ui:BrowserOperationException" sap:VirtualizedContainerService.HintSize="452.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -333,7 +338,7 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <Sequence DisplayName="Fin de la séquence de pre-login" sap:VirtualizedContainerService.HintSize="449.6,204.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <Sequence DisplayName="Fin de la séquence de pre-login" sap:VirtualizedContainerService.HintSize="449.6,334.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -346,6 +351,13 @@
               </InArgument>
             </ui:LogMessage.Message>
           </ui:LogMessage>
+          <ui:RemoveLogFields DisplayName="Suppresion de l'action PRE-LOGIN du LogCat" sap:VirtualizedContainerService.HintSize="387.2,89.6" sap2010:WorkflowViewState.IdRef="RemoveLogFields_1">
+            <ui:RemoveLogFields.Fields>
+              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                <InArgument x:TypeArguments="x:String">ACTION</InArgument>
+              </scg:List>
+            </ui:RemoveLogFields.Fields>
+          </ui:RemoveLogFields>
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
