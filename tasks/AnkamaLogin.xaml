@@ -14,7 +14,7 @@
     </InArgument>
   </this:AnkamaLogin.in_Password>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>850.4,2207.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850.4,2466.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -129,12 +129,17 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Connexion au compte Dofus" sap:VirtualizedContainerService.HintSize="582.4,2142.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Connexion au compte Dofus" sap:VirtualizedContainerService.HintSize="582.4,2401.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+    <ui:AddLogFields DisplayName="Ajout de l'action ANKAMA-LOGIN dans le LogCat" sap:VirtualizedContainerService.HintSize="520,89.6" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
+      <ui:AddLogFields.Fields>
+        <InArgument x:TypeArguments="x:String" x:Key="ACTION">ANKAMA-LOGIN</InArgument>
+      </ui:AddLogFields.Fields>
+    </ui:AddLogFields>
     <ui:LogMessage DisplayName="Début de la connexion au compte" sap:VirtualizedContainerService.HintSize="520,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info">
       <ui:LogMessage.Message>
         <InArgument x:TypeArguments="x:Object">
@@ -142,15 +147,15 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <TryCatch DisplayName="On tente la connexion au compte" sap:VirtualizedContainerService.HintSize="520,1897.6" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+    <TryCatch DisplayName="On tente la connexion au compte" sap:VirtualizedContainerService.HintSize="520,2027.2" sap2010:WorkflowViewState.IdRef="TryCatch_3">
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Ouverture d'une instance de la page de pre-login de Dofus" sap:VirtualizedContainerService.HintSize="483.2,1204.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" IsIncognito="False" ScopeGuid="56e4dd2a-1dfa-46e4-a714-262f2d178d8e" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Ouverture d'une instance de la page de pre-login de Dofus" sap:VirtualizedContainerService.HintSize="483.2,1334.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" IsIncognito="False" ScopeGuid="56e4dd2a-1dfa-46e4-a714-262f2d178d8e" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Connexion du compte" sap:VirtualizedContainerService.HintSize="449.6,988" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence DisplayName="Connexion du compte" sap:VirtualizedContainerService.HintSize="449.6,1117.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="doValidateCookies">
                     <Variable.Default>
@@ -184,6 +189,11 @@
                     </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
+                <ui:AddLogFields DisplayName="Ajout de l'action ANKAMA-LOGIN dans le LogCat" sap:VirtualizedContainerService.HintSize="387.2,89.6" sap2010:WorkflowViewState.IdRef="AddLogFields_4">
+                  <ui:AddLogFields.Fields>
+                    <InArgument x:TypeArguments="x:String" x:Key="ACTION">ANKAMA-LOGIN</InArgument>
+                  </ui:AddLogFields.Fields>
+                </ui:AddLogFields>
                 <ui:LogMessage DisplayName="Connexion au site Dofus réussie" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Trace">
                   <ui:LogMessage.Message>
                     <InArgument x:TypeArguments="x:Object">

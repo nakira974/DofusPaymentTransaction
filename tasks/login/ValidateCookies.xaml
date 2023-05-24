@@ -3,7 +3,7 @@
     <x:Property Name="in_AnkamaLogin" Type="InArgument(x:Boolean)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>850.4,765.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850.4,3134.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -99,47 +99,52 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Validation des cookies" sap:VirtualizedContainerService.HintSize="590.4,700.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Validation des cookies" sap:VirtualizedContainerService.HintSize="758.4,3069.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="On tente l'utilisation d'une instance de la page de pre-login de Dofus ou Ankama" sap:VirtualizedContainerService.HintSize="528,588.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="On tente l'utilisation d'une instance de la page de pre-login de Dofus ou Ankama" sap:VirtualizedContainerService.HintSize="696,2957.6" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="659.2,2706.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
+        <Sequence sap:VirtualizedContainerService.HintSize="659.2,2703.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If DisplayName="Cookies Ankama ou pre-login Dofus ?" sap:VirtualizedContainerService.HintSize="596.8,2594.4" sap2010:WorkflowViewState.IdRef="If_2">
+          <If DisplayName="Cookies Ankama ou pre-login Dofus ?" sap:VirtualizedContainerService.HintSize="596.8,2591.2" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Condition>
               <InArgument x:TypeArguments="x:Boolean">
                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">in_AnkamaLogin</CSharpValue>
               </InArgument>
             </If.Condition>
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="563.2,1205.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <Sequence sap:VirtualizedContainerService.HintSize="563.2,1204" sap2010:WorkflowViewState.IdRef="Sequence_13">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Utilisation d'une instance de la page de login Ankama" sap:VirtualizedContainerService.HintSize="520,1116" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="ff9b3148-1742-40e0-ba86-f0a5681dfb86" Version="V2">
+                <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Utilisation d'une instance de la page de login Ankama" sap:VirtualizedContainerService.HintSize="520,1114.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="ff9b3148-1742-40e0-ba86-f0a5681dfb86" Version="V2">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                       </ActivityAction.Argument>
-                      <TryCatch DisplayName="On tente la validation des cookies de login Ankama" sap:VirtualizedContainerService.HintSize="486.4,899.2" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                      <TryCatch DisplayName="On tente la validation des cookies de login Ankama" sap:VirtualizedContainerService.HintSize="486.4,897.6" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                         <TryCatch.Try>
-                          <Sequence DisplayName="Validation des cookies de login Ankama" sap:VirtualizedContainerService.HintSize="449.6,668" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                          <Sequence DisplayName="Validation des cookies de login Ankama" sap:VirtualizedContainerService.HintSize="449.6,666.4" sap2010:WorkflowViewState.IdRef="Sequence_17">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
+                            <ui:AddLogFields DisplayName="Ajout de l'action ANKAMA-COOKIES-VALIDATION dans le LogCat" sap:VirtualizedContainerService.HintSize="387.2,89.6" sap2010:WorkflowViewState.IdRef="AddLogFields_1">
+                              <ui:AddLogFields.Fields>
+                                <InArgument x:TypeArguments="x:String" x:Key="ACTION">ANKAMA-COOKIES-VALIDATION</InArgument>
+                              </ui:AddLogFields.Fields>
+                            </ui:AddLogFields>
                             <ui:LogMessage DisplayName="Bannière de cookies de login Ankama présente" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace">
                               <ui:LogMessage.Message>
                                 <InArgument x:TypeArguments="x:Object">
@@ -147,11 +152,6 @@
                                 </InArgument>
                               </ui:LogMessage.Message>
                             </ui:LogMessage>
-                            <ui:AddLogFields DisplayName="Ajout de l'action ANKAMA-COOKIES-VALIDATION dans le LogCat" sap:VirtualizedContainerService.HintSize="387.2,89.6" sap2010:WorkflowViewState.IdRef="AddLogFields_1">
-                              <ui:AddLogFields.Fields>
-                                <InArgument x:TypeArguments="x:String" x:Key="ACTION">ANKAMA-COOKIES-VALIDATION</InArgument>
-                              </ui:AddLogFields.Fields>
-                            </ui:AddLogFields>
                             <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="False" DisplayName="On valide les cookies de pre-login Dofus" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ff9b3148-1742-40e0-ba86-f0a5681dfb86" Timeout="5" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://account.ankama.com/en/login?f=https%3A%2F%2Fwww.dofus.com%2Fen" CvElementArea="1144, 534, 209, 63" CvTextArea="1186, 552, 123, 23" CvTextArgument="ACCEPT ALL" CvType="Button" DesignTimeRectangle="1146, 538, 206, 58" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'accept all'" FullSelectorArgument="&lt;webctrl aaname='             accept all        ' parentid='ui-id-1' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='             accept all        ' parentid='ui-id-1' tag='BUTTON' type='' class='btn btn-primary btn-lg ak-accept' check:innerText='ACCEPT ALL' /&gt;" Guid="30df8b7b-54ea-44c0-942c-e5f526a91904" ImageBase64="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" InformativeScreenshot="adf559a3c6718fce5d7c44268f4db95a.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='Ankama Account' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
@@ -209,26 +209,31 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence sap:VirtualizedContainerService.HintSize="563.2,1205.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <Sequence sap:VirtualizedContainerService.HintSize="563.2,1204" sap2010:WorkflowViewState.IdRef="Sequence_14">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Utilisation d'une instance de la page de pre-login de Dofus" sap:VirtualizedContainerService.HintSize="520,1116" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="d3c6f567-be0a-469a-82b1-e748a4d3538e" Version="V2">
+                <uix:NApplicationCard AttachMode="SingleWindow" DisplayName="Utilisation d'une instance de la page de pre-login de Dofus" sap:VirtualizedContainerService.HintSize="520,1114.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="Never" ScopeGuid="d3c6f567-be0a-469a-82b1-e748a4d3538e" Version="V2">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                       </ActivityAction.Argument>
-                      <TryCatch DisplayName="On tente la validation des cookies de pre-login Dofus" sap:VirtualizedContainerService.HintSize="486.4,899.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                      <TryCatch DisplayName="On tente la validation des cookies de pre-login Dofus" sap:VirtualizedContainerService.HintSize="486.4,897.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                         <TryCatch.Try>
-                          <Sequence DisplayName="Validation des cookies de pre-login Dofus" sap:VirtualizedContainerService.HintSize="449.6,668" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <Sequence DisplayName="Validation des cookies de pre-login Dofus" sap:VirtualizedContainerService.HintSize="449.6,666.4" sap2010:WorkflowViewState.IdRef="Sequence_6">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
+                            <ui:AddLogFields DisplayName="Ajout de l'action DOFUS-COOKIES-VALIDATION dans le LogCat" sap:VirtualizedContainerService.HintSize="387.2,89.6" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
+                              <ui:AddLogFields.Fields>
+                                <InArgument x:TypeArguments="x:String" x:Key="ACTION">DOFUS-COOKIES-VALIDATION</InArgument>
+                              </ui:AddLogFields.Fields>
+                            </ui:AddLogFields>
                             <ui:LogMessage DisplayName="Bannière de cookies de pre-login Dofus présente" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace">
                               <ui:LogMessage.Message>
                                 <InArgument x:TypeArguments="x:Object">
@@ -236,11 +241,6 @@
                                 </InArgument>
                               </ui:LogMessage.Message>
                             </ui:LogMessage>
-                            <ui:AddLogFields DisplayName="Ajout de l'action DOFUS-COOKIES-VALIDATION dans le LogCat" sap:VirtualizedContainerService.HintSize="387.2,89.6" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
-                              <ui:AddLogFields.Fields>
-                                <InArgument x:TypeArguments="x:String" x:Key="ACTION">DOFUS-COOKIES-VALIDATION</InArgument>
-                              </ui:AddLogFields.Fields>
-                            </ui:AddLogFields>
                             <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="False" DisplayName="On valide les cookies de pre-login Dofus" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d3c6f567-be0a-469a-82b1-e748a4d3538e" Timeout="5" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://www.dofus.com/en/prehome" CvElementArea="1115, 545, 190, 63" CvTextArea="1155, 562, 107, 26" CvTextArgument="ACCEPT ALL" CvType="Button" DesignTimeRectangle="1117, 549, 186, 58" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'accept all'" FullSelectorArgument="&lt;webctrl aaname='             accept all        ' parentid='ui-id-1' tag='BUTTON' /&gt;" FuzzyAccuracy="0.82" FuzzySelectorArgument="&lt;webctrl aaname='             accept all        ' parentid='ui-id-1' tag='BUTTON' type='' class='btn btn-primary btn-lg ak-accept' check:innerText='ACCEPT ALL' /&gt;" Guid="4481a5a6-03d1-4aef-8a71-09b9f86acef8" ImageBase64="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" InformativeScreenshot="f25d0a6ceab94213bfc9879a4c294277.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='DOFUS, the Tactical MMORPG' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
@@ -310,7 +310,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="494.4,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="662.4,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -338,7 +338,7 @@
             </Sequence>
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="ui:BrowserOperationException" sap:VirtualizedContainerService.HintSize="494.4,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+        <Catch x:TypeArguments="ui:BrowserOperationException" sap:VirtualizedContainerService.HintSize="662.4,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
