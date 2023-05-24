@@ -191,11 +191,6 @@
                     </InArgument>
                   </ui:LogMessage.Message>
                 </ui:LogMessage>
-                <ui:AddLogFields DisplayName="Ajout de l'action ANKAMA-LOGIN dans le LogCat" sap:VirtualizedContainerService.HintSize="387.2,89.6" sap2010:WorkflowViewState.IdRef="AddLogFields_1">
-                  <ui:AddLogFields.Fields>
-                    <InArgument x:TypeArguments="x:String" x:Key="ACTION">ANKAMA-LOGIN</InArgument>
-                  </ui:AddLogFields.Fields>
-                </ui:AddLogFields>
                 <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="On se connecte à Ankama" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="56e4dd2a-1dfa-46e4-a714-262f2d178d8e" Version="V3">
                   <uix:NClick.Target>
                     <uix:TargetAnchorable BrowserURL="https://www.dofus.com/en" CvElementArea="1410, 148, 115, 43" CvTextArea="1424, 164, 45, 11" CvTextArgument="SIGN IN" CvType="Button" DesignTimeRectangle="1411, 151, 74, 40" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Sign in'" FullSelectorArgument="&lt;webctrl tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='' aaname='Sign in' check:innerText='SIGN IN' /&gt;" Guid="896949d8-2c8a-4b28-bcac-841f2119a928" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE4AAAAsCAYAAADLlo5MAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAK4SURBVGhD7ZbPaxpBFMdDzukf4WUPHvTQPZQSLKRhMYceAhLQSwXBGhCkXRCExUORBoQgShAJCsFFE2IZRJb99759o6vuShPY1xwW+oSPzI+3A++zM/P26OTkHYT4HNFP/yGVSgkxEHFMRBwTEcdExDERcUxEHBMRx0TEMRFxTEQcExHHRMQxEXFMRBwTEcfkjcSl8aUxwFSt4Ps+vOUTRk4B5na+0qfxPirbvvEBX39O8LT0gngXg+Zh/AztCyNYf0Ol78PvVyJjayLrW3BmPpZ31f16GsvBjNZ0rNDYP/Am4rLXQ0p+hB/5DAzqp09L6LgruC1rExNJLItyT8FzOyidpqlvIJNvYKg8TOzcPn6p8HtsI7d+ZkMccUrN0S2GxCdR3NWNgk9vWEvbjhnlLhb3Ns50P5zYRxsTf4HO5T5WYzXHWIy+b0Tp+Fkb1baLUd3cxcQR129UcUcv59IIYpIozih2oXyFsVPCp0z0eK0JJ7ZOYJvkC6zFObCMIrpPFJvdjMcSV0khZ0/gOsGuT6I4jVloYjBVWNGdtVJT3NbOkd7OvyLOcmY0R0I0WtY2Pmhnyz3Mu8X1bo4rTrdbD2PYOWonVdyO9Ht8LjkYK7pngoRfE7cjJCvSTpmojx7paBsMcXQaLjt4HNVhJk/cGez7BXrfspFxo3oHX93gSvfDiQV33K/CwZF+URyRszF+aMFhiNPFp9ido9fqJG/HWS0X3nMftaCqGpk8GkOqnMNrZHVMJDGdCBUTNUTjIN53W/tiEhZHz1xQofA8jjjCpEJBVdtL3lFN47x2u/uO81cK00ETBTOYjySmMVFo7r/7/hofEUfoQkHHnyWO0IUigeL+P0QcExHHRMQxEXFMRBwTEcdExDERcUxEHBMRx0TEMRFxTEQcExHH5Gj4eAwhPiKOiYhjcYw/hi4pISnZAA4AAAAASUVORK5CYII=" InformativeScreenshot="da8abd4166647494f91e7b97b11dc81d.png" ScopeSelectorArgument="&lt;html app='firefox.exe' title='DOFUS, the Tactical MMORPG' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
@@ -214,6 +209,11 @@
                     </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
+                <ui:AddLogFields DisplayName="Ajout de l'action ANKAMA-LOGIN dans le LogCat" sap:VirtualizedContainerService.HintSize="387.2,89.6" sap2010:WorkflowViewState.IdRef="AddLogFields_1">
+                  <ui:AddLogFields.Fields>
+                    <InArgument x:TypeArguments="x:String" x:Key="ACTION">ANKAMA-LOGIN</InArgument>
+                  </ui:AddLogFields.Fields>
+                </ui:AddLogFields>
               </Sequence>
             </ActivityAction>
           </uix:NApplicationCard.Body>
