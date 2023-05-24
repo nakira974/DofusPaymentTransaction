@@ -14,7 +14,7 @@
     </InArgument>
   </this:AnkamaLogin.in_Password>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>850.4,1350.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850.4,1484.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -129,7 +129,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Connexion au site Dofus" sap:VirtualizedContainerService.HintSize="582.4,1285.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Connexion au compte Dofus" sap:VirtualizedContainerService.HintSize="582.4,1420" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -142,15 +142,15 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <TryCatch DisplayName="On tente la connexion au compte" sap:VirtualizedContainerService.HintSize="520,1040.8" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+    <TryCatch DisplayName="On tente la connexion au compte" sap:VirtualizedContainerService.HintSize="520,1175.2" sap2010:WorkflowViewState.IdRef="TryCatch_3">
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Ouverture d'une instance de la page de pre-login de Dofus" sap:VirtualizedContainerService.HintSize="483.2,589.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" IsIncognito="False" ScopeGuid="56e4dd2a-1dfa-46e4-a714-262f2d178d8e" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Ouverture d'une instance de la page de pre-login de Dofus" sap:VirtualizedContainerService.HintSize="483.2,724" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" IsIncognito="False" ScopeGuid="56e4dd2a-1dfa-46e4-a714-262f2d178d8e" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Connexion du compte" sap:VirtualizedContainerService.HintSize="449.6,372.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence DisplayName="Connexion du compte" sap:VirtualizedContainerService.HintSize="449.6,507.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="doValidateCookies">
                     <Variable.Default>
@@ -184,6 +184,13 @@
                     </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Trace">
+                  <ui:LogMessage.Message>
+                    <InArgument x:TypeArguments="x:Object">
+                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">"Connexion au site Dofus réussie"</CSharpValue>
+                    </InArgument>
+                  </ui:LogMessage.Message>
+                </ui:LogMessage>
               </Sequence>
             </ActivityAction>
           </uix:NApplicationCard.Body>
