@@ -4,9 +4,9 @@
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.20.1]",
-    "UiPath.Mail.Activities": "[1.18.2]",
-    "UiPath.System.Activities": "[23.4.2]",
-    "UiPath.UIAutomation.Activities": "[23.4.4]"
+    "UiPath.Mail.Activities": "[1.19.0]",
+    "UiPath.System.Activities": "[23.5.0-preview]",
+    "UiPath.UIAutomation.Activities": "[23.5.0-preview]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -55,6 +55,8 @@
   ],
   "isTemplate": false,
   "templateProjectData": {},
-  "publishData": {},
+  "publishData": {
+    "iconUrl": ".package/dofus_logo.jpeg"
+  },
   "targetFramework": "Windows"
 }
